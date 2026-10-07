@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>爪迹 PetTrace · 养宠成长记录与社区</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- 侧边导航 -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-logo">🐾</span>
+        <div class="brand-text">
+          <h1>爪迹</h1>
+          <p>PetTrace</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-item active" data-view="dashboard"><span class="nav-ico">🏠</span>首页</a>
+        <a class="nav-item" data-view="pets"><span class="nav-ico">🐾</span>我的宠物</a>
+        <a class="nav-item" data-view="records"><span class="nav-ico">💉</span>健康档案</a>
+        <a class="nav-item" data-view="timeline"><span class="nav-ico">📅</span>成长时间线</a>
+        <a class="nav-item" data-view="community"><span class="nav-ico">💬</span>宠友社区</a>
+        <a class="nav-item" data-view="match"><span class="nav-ico">📍</span>附近宠友</a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <p>记录每一次陪伴 🐾</p>
+      </div>
+    </aside>
+
+    <!-- 主内容 -->
+    <main class="main">
+      <header class="topbar">
+        <h2 id="viewTitle">首页</h2>
+        <div class="topbar-actions" id="topbarActions"></div>
+      </header>
+      <div class="content" id="content"></div>
+    </main>
+  </div>
+
+  <!-- 弹窗 -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modalBox"></div>
+  </div>
+
+  <!-- 提示 -->
+  <div class="toast" id="toast"></div>
+
+  <input type="file" id="hiddenFileInput" accept="image/*" hidden />
+
+  <script src="app.js"></script>
+</body>
+</html>
